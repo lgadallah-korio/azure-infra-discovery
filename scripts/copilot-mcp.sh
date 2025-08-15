@@ -58,10 +58,19 @@ parse_query() {
         return 0
     fi
     
-    # Check Azure authentication for actual queries
-    if ! az account show > /dev/null 2>&1; then
-        echo -e "${RED}❌ Not authenticated to Azure. Please run 'az login'.${NC}"
-        return 1
+    # Check if this is a query that needs Azure authentication
+    local needs_azure=false
+    if [[ "$query" =~ (list|show|get|configuration|config|describe|resources in|what.*in|terraform.*best|best.*terraform).*(aks|cluster|resource group|rg|subscription|vnet|virtual network|network|storage|account|resource|all|practice|practices) ]] ||
+       [[ "$query" =~ (aks|cluster|resource group|rg|subscription|vnet|virtual network|network|storage|account|resource|all).*(list|show|get|configuration|config|describe|resources) ]]; then
+        needs_azure=true
+    fi
+    
+    # Check Azure authentication only if needed
+    if [ "$needs_azure" = true ]; then
+        if ! az account show > /dev/null 2>&1; then
+            echo -e "${RED}❌ Not authenticated to Azure. Please run 'az login'.${NC}"
+            return 1
+        fi
     fi
     
     # AKS/Kubernetes related queries
