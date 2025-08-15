@@ -8,18 +8,17 @@ echo "📦 Checking dependencies..."
 command -v node >/dev/null 2>&1 || { echo "❌ Node.js required"; exit 1; }
 command -v az >/dev/null 2>&1 || { echo "❌ Azure CLI required"; exit 1; }
 
-# Install MCP servers and Claude Code
-echo "📥 Installing MCP servers and Claude Code..."
+# Install MCP servers
+echo "📥 Installing MCP servers..."
 npm install -g @azure/mcp
 npm install -g mcp-server-kubernetes
-npm install -g @anthropic-ai/claude-code
 
-# Configure Claude Code with MCP server
-echo "🤖 Configuring Claude Code..."
-if [ -f "./scripts/configure-claude-code.sh" ]; then
-    ./scripts/configure-claude-code.sh
+# Configure GitHub Copilot-style MCP integration
+echo "🤖 Configuring GitHub Copilot-style MCP integration..."
+if [ -f "./scripts/configure-copilot-mcp.sh" ]; then
+    ./scripts/configure-copilot-mcp.sh
 else
-    echo "⚠️  Claude Code configuration script not found"
+    echo "⚠️  GitHub Copilot MCP configuration script not found"
 fi
 
 # Configure authentication

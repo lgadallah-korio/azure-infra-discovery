@@ -3,8 +3,8 @@
 **Session:** [Session number/name]
 
 ## Query
-```
-[Natural language query here]
+```bash
+./scripts/copilot-mcp.sh "[Natural language query here]"
 ```
 
 ## Response

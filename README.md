@@ -5,16 +5,16 @@ This workspace contains all tools and documentation for reverse-engineering Azur
 ## Quick Start
 1. Run `./scripts/setup.sh` to configure environment
 2. Configure Azure authentication in `configs/`
-3. Start discovery with natural language queries using Claude Code
+3. Start discovery with natural language queries using GitHub Copilot-style integration
 4. Track progress in `docs/DISCOVERY.md`
 
 ## Natural Language Queries (Recommended)
-Use Claude Code for natural language infrastructure discovery:
+Use the GitHub Copilot-style wrapper for natural language infrastructure discovery:
 ```bash
-claude "List my AKS clusters"
-claude "What resources are in my vozni-test-rg resource group?"
-claude "Show me the configuration of my vozni-test-aks cluster"
-claude "Give me Terraform best practices for Azure"
+./scripts/copilot-mcp.sh "List my AKS clusters"
+./scripts/copilot-mcp.sh "What resources are in my vozni-test-rg resource group?"
+./scripts/copilot-mcp.sh "Show me the configuration of my vozni-test-aks cluster"
+./scripts/copilot-mcp.sh "Give me Terraform best practices for Azure"
 ```
 
 ## Direct MCP Commands (Alternative)
