@@ -27,6 +27,14 @@ B2C -> Applications
 
 ## Discovery Sessions
 
+### How to Run Queries
+Use the GitHub Copilot-style wrapper for natural language queries:
+```bash
+./scripts/copilot-mcp.sh "List my AKS clusters"
+./scripts/copilot-mcp.sh "What resources are in my resource group?"
+./scripts/copilot-mcp.sh "Show me Terraform best practices for Azure"
+```
+
 ### Session 1: [Date]
 **Queries Run:**
 - 

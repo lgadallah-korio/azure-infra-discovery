@@ -12,11 +12,13 @@ else
 fi
 
 echo ""
-echo "🧪 Testing Claude Code integration..."
-if command -v claude &> /dev/null; then
-    echo "✅ Claude Code installed"
+echo "🧪 Testing GitHub Copilot-style MCP integration..."
+if [ -f "./scripts/copilot-mcp.sh" ]; then
+    echo "✅ GitHub Copilot-style MCP wrapper found"
+    echo "💡 Test natural language queries with:"
+    echo "   ./scripts/copilot-mcp.sh 'List my AKS clusters'"
 else
-    echo "❌ Claude Code not found"
+    echo "❌ GitHub Copilot-style MCP wrapper not found"
 fi
 
 echo ""

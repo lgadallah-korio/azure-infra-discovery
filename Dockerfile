@@ -26,6 +26,6 @@ COPY . .
 RUN chmod +x scripts/*.sh
 
 # Install MCP servers
-RUN npm install -g @azure/mcp mcp-server-kubernetes @anthropic-ai/claude-code
+RUN npm install -g @azure/mcp mcp-server-kubernetes
 
 EXPOSE 3000 8080
