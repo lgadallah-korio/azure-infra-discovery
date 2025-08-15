@@ -1,0 +1,21 @@
+{
+    "name": "Azure Infrastructure Discovery",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu", 
+    "features": {
+        "ghcr.io/devcontainers/features/azure-cli:1": {},
+        "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
+        "ghcr.io/devcontainers/features/node:1": {}
+    },
+    "postCreateCommand": "./scripts/setup.sh",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.azure-account",
+                "ms-kubernetes-tools.vscode-kubernetes-tools",
+                "hashicorp.terraform"
+            ]
+        }
+    },
+    "forwardPorts": [3000, 8080],
+    "remoteUser": "vscode"
+}

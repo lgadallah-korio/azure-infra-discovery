@@ -1,0 +1,18 @@
+{
+  "subscriptionId": "YOUR_SUBSCRIPTION_ID",
+  "resourceGroups": [
+    "your-aks-rg",
+    "your-networking-rg"
+  ],
+  "enabledServices": [
+    "compute",
+    "network", 
+    "containers",
+    "identity",
+    "security"
+  ],
+  "regions": [
+    "eastus",
+    "westus2"
+  ]
+}

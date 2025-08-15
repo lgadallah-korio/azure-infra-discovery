@@ -1,0 +1,15 @@
+{
+  "clusters": [
+    {
+      "name": "your-aks-cluster",
+      "resourceGroup": "your-aks-rg", 
+      "subscriptionId": "YOUR_SUBSCRIPTION_ID"
+    }
+  ],
+  "enabledFeatures": [
+    "cluster-info",
+    "network-policies", 
+    "azure-monitoring",
+    "fleet-management"
+  ]
+}

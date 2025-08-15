@@ -1,0 +1,27 @@
+# Sensitive files
+*.env
+*.env.local
+configs/*.bak
+.azure/
+
+# Node modules
+node_modules/
+npm-debug.log*
+
+# Temporary files
+*.tmp
+*.log
+.DS_Store
+
+# IDE files
+.vscode/settings.json
+.idea/
+
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+*.tfplan
+
+# Keep template configs but ignore actual auth
+configs/*-config.json.bak
